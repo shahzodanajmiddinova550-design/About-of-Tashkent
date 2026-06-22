@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ORQA FONGA TOSHKENT TELEMINORASI RASMI QO'SHILDI */
+body {
+    background-image: url('teleminora.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Rasm ustidan qora shaffof qatlam (matnlar yaxshi o'qilishi uchun) */
+.main-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigatsiya bloki */
+nav {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.box h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.box p {
+    font-size: 1.1rem;
+    color: #00ffcc; 
+    font-weight: 600;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Menyu tugmalari */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+/* Tugmaga sichqoncha kelganda yonish effekti */
+nav ul li a:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(255,255,255,0.6);
+    transform: translateY(-3px);
+}
+
+/* Ma'lumotlar chiqadigan oyna */
+header {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.65); /* Bir oz to'qroq qilindi, rasm ustida matn tiniq o'qiladi */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+header h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Sarlavha tagidagi chiziq */
+header h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: #00ffcc;
+    border-radius: 2px;
+}
+
+/* Matn sozlamalari */
+header p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* Mobil telefonlar uchun avtomatik moslashish */
+@media (max-width: 768px) {
+    .box h1 { font-size: 2rem; }
+    nav ul { flex-direction: column; gap: 8px; }
+    nav ul li a { display: block; padding: 10px; }
+    header { padding: 25px; }
+    header p { font-size: 1rem; }
+}
